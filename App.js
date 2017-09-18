@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Application from './src/components/Application';
+import Application from './src/Application';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <Application />
