@@ -12,7 +12,8 @@ function Input({ label, onChangeText, value, placeholder, secureTextEntry }) {
             style={inputStyle} 
             value={value} 
             onChangeText={onChangeText} 
-            placeholder={placeholder} />
+            placeholder={placeholder} 
+            />
         </View>    
     );
 }
