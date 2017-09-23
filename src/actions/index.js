@@ -13,11 +13,14 @@ export const passwordChanged = (text) => ({
 });
 
 export const loginUser = ({ email, password }) => {
- firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(user => {
-        console.log(user);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+    return (dispatch) => {
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(user => {
+                dispatch({
+                    type: 'LOGIN_USER_SUCCESS',
+                    payload: user
+                });
+                console.log(user);
+            });
+    };
 };
