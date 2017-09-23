@@ -30,7 +30,10 @@ class LoginForm extends Component {
                     secureTextEntry
                     onChangeText={this.onPasswordChange.bind(this)}
                     />
-                </CardSection>    
+                </CardSection>
+                <CardSection>
+                    <Text>Some text</Text>
+                </CardSection>        
                <CardSection>
                    <Button>Login</Button>
                </CardSection>       

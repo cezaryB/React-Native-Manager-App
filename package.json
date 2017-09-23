@@ -25,7 +25,8 @@
     "react": "^16.0.0-alpha.12",
     "react-native": "^0.47.0",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
   "author": "",
