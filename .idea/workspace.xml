@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fbb49644-cbcd-46ed-a7b1-9560a720ba78" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.js" afterPath="$PROJECT_DIR$/src/Application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/index.js" afterPath="$PROJECT_DIR$/src/actions/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/types.js" afterPath="$PROJECT_DIR$/src/actions/types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LoginForm.js" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/AuthReducer.js" afterPath="$PROJECT_DIR$/src/reducers/AuthReducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/index.js" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
     </list>
     <ignored path="manager-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +62,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -80,8 +79,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,7 +173,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="40" width="1602" height="1000" extended-state="0" />
+    <frame x="109" y="40" width="1602" height="1000" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
