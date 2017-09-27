@@ -10,6 +10,7 @@ const RouterComponent = () => {
                 key='login'
                 component={LoginForm}
                 title='Please login'
+                initial
             />
             <Scene
                 key='employeeList'
