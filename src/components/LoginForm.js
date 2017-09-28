@@ -5,6 +5,9 @@ import { Card, CardSection, Input, Button, Spinner } from './common';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
 
 class LoginForm extends Component {
+    static navigationOptions = {
+        title: 'Please login',
+    }
     onEmailChange(text) {
         this.props.emailChanged(text);
     }
@@ -13,8 +16,9 @@ class LoginForm extends Component {
         console.log(this.props.password);
     }
     onButtonPress() {
-        const { email, password } = this.props;
-        this.props.loginUser({ email, password });
+        const { email, password, navigation } = this.props;
+        this.props.loginUser({ email, password, navigation });
+        console.log(this.props.navigation);
     }
     renderButton() {
         if (!this.props.loading) {

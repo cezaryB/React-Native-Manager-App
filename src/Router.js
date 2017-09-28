@@ -1,23 +1,14 @@
 import React from 'react';
-import { Scene, Router } from 'react-native-router-flux';
+import { StackNavigator } from 'react-navigation';
 import LoginForm from './components/LoginForm';
 import EmployeeList from './components/EmployeeList';
+import EmployeeCreation from './components/EmployeeCreation';
 
-const RouterComponent = () => {
-    return (
-        <Router sceneStyle={{ paddingTop: 65 }}>
-            <Scene
-                key='login'
-                component={LoginForm}
-                title='Please login'
-            />
-            <Scene
-                key='employeeList'
-                component={EmployeeList}
-                title='Employees'
-            />
-        </Router>    
-    );
-};
+const RouterComponent = StackNavigator({
+        login: { screen: LoginForm },
+        employeeList: { screen: EmployeeList },
+        employeeCreation: { screen: EmployeeCreation }
+    }  
+);
 
 export default RouterComponent;
