@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { Picker, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { Card, CardSection, Input, Button } from './common';
-import { employeeUpdate } from '../actions/EmployeeActions';
+import { employeeUpdate, employeeCreate } from '../actions/EmployeeActions';
 
 class EmployeeCreation extends Component {
     static navigationOptions = {
         title: 'Add employee',
         headerLeft: null
+    }
+    onButtonPress() {
+        const { name, phone, shift, navigation } = this.props;
+        this.props.employeeCreate({ name, phone, shift: shift || 'Monday', navigation });
     }
     render() {
         return (
@@ -44,7 +48,9 @@ class EmployeeCreation extends Component {
                     </Picker>    
                 </CardSection>  
                 <CardSection>
-                    <Button>Create</Button>
+                    <Button onPress={this.onButtonPress.bind(this)}>
+                        Create
+                    </Button>
                 </CardSection>      
             </Card>      
         );
@@ -67,4 +73,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, { employeeUpdate })(EmployeeCreation);
+export default connect(mapStateToProps, { employeeUpdate, employeeCreate })(EmployeeCreation);
