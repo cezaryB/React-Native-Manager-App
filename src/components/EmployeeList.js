@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
+import { employeesFetch } from '../actions';
 
-export default class EmployeeList extends Component {
+
+class EmployeeList extends Component {
     static navigationOptions = ({ navigation }) => {
         const { params } = navigation.state;
         return {
@@ -9,6 +12,9 @@ export default class EmployeeList extends Component {
             headerLeft: null,
             headerRight: <Text onPress={() => params.handleClick()}>Add</Text>
         };
+    }
+    componentWillMount() {
+        this.props.employeesFetch();
     }
     componentDidMount() {
         this.props.navigation.setParams({ handleClick: () => this.handleClick() });
@@ -28,3 +34,4 @@ export default class EmployeeList extends Component {
     }
 }
 
+export default connect(null, { employeesFetch })(EmployeeList);
