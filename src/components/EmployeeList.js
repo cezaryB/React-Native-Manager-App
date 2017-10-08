@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { NavigationActions } from 'react-navigation';
 import { FlatList, Text } from 'react-native';
 import { employeesFetch } from '../actions';
 import ListItem from './ListItem';
@@ -38,14 +39,14 @@ class EmployeeList extends Component {
         console.log('hello');
     }
     renderItem(employee) {
-        return <ListItem employee={employee} />;
+        return <ListItem employee={employee} navigation={this.props.navigation} />;
     }
     render() {
-        console.log(this.props.employees);
         return (
             <FlatList 
             data={this.props.employees}
-            renderItem={this.renderItem}
+            renderItem={this.renderItem.bind(this)}
+            navigation={this.props.navigation}
             />
         );
     }

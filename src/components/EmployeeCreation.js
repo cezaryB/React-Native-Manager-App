@@ -14,6 +14,7 @@ class EmployeeCreation extends Component {
         this.props.employeeCreate({ name, phone, shift: shift || 'Monday', navigation });
     }
     render() {
+        console.log(this.props.navigation.state);
         return (
             <Card>
                 <CardSection>
