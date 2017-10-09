@@ -4,11 +4,9 @@ import { CardSection } from './common';
 
 class ListItem extends Component {
     onRowPress() {
-        this.props.navigation.navigate('employeeCreation', {
+        this.props.navigation.navigate('employeeEdit', {
             employee: this.props.employee.item
         });
-        // this.props.navigation.navigate('employeeCreation');
-        // console.log(this.props.navigation);
     }
     render() {
         const { name } = this.props.employee.item;
