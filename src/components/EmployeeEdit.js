@@ -14,7 +14,11 @@ class EmployeeEdit extends Component {
     }
     onButtonPress() {
         const { name, phone, shift } = this.props;
-        console.log(name, phone, shift);
+        this.props.employeeSave({ name, 
+            phone, 
+            shift, 
+            uid: this.props.navigation.state.params.employee.uid 
+        });
     }
     render() {
         return (
