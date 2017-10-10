@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Card, CardSection, Button } from './common';
 import EmployeeForm from './EmployeeForm';
-import { employeeUpdate } from '../actions';
+import { employeeUpdate, employeeSave } from '../actions';
 
 class EmployeeEdit extends Component {
     componentWillMount() {
@@ -17,7 +17,8 @@ class EmployeeEdit extends Component {
         this.props.employeeSave({ name, 
             phone, 
             shift, 
-            uid: this.props.navigation.state.params.employee.uid 
+            uid: this.props.navigation.state.params.employee.uid,
+            navigation: this.props.navigation 
         });
     }
     render() {
@@ -41,4 +42,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, { employeeUpdate })(EmployeeEdit);
+export default connect(mapStateToProps, { employeeUpdate, employeeSave })(EmployeeEdit);

@@ -2,6 +2,7 @@ import firebase from 'firebase';
 import { 
     EMPLOYEE_UPDATE,
     EMPLOYEE_CREATE,
+    EMPLOYEE_SAVE_SUCCESS,
     EMPLOYEES_FETCH_SUCCESS
 } from './types';
 
@@ -34,13 +35,14 @@ export const employeesFetch = () => {
     };
 };
 
-export const employeeSave = ({ name, phone, shift, uid }) => {
+export const employeeSave = ({ name, phone, shift, uid, navigation }) => {
     const { currentUser } = firebase.auth();
-    return () => {
+    return dispatch => {
         firebase.database().ref(`users/${currentUser.uid}/employees/${uid}`)
             .set({ name, phone, shift })
             .then(() => {
-                console.log('saved');
+                dispatch({ type: EMPLOYEE_SAVE_SUCCESS });
+                navigation.navigate('employeeList');
             });
     }; 
 };
